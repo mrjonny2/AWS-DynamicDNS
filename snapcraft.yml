@@ -1,0 +1,15 @@
+name: route53-dyndns-28station
+version: 1
+summary: route53-dyndns-28station
+description: route53-dyndns-28station
+
+apps:
+  my-service:
+    command: route53Update.sh
+    daemon: simple
+
+parts:
+  foo:
+    plugin: copy
+    files:
+      route53Update.sh: bin/
